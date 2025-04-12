@@ -4,12 +4,150 @@
     <div class="subscribe-container">
       <div class="subscribe-content">
         <div class="side left-side">
-          <h1>Subscribe</h1>
-          <p>to our Monthly Surprise Box</p>
+          <div class="head">
+            <h1>Subscribe</h1>
+            <p>to our Monthly Surprise Box</p>
+          </div>
+          <form>
+            <div class="form-group">
+              <h2>Contact Information</h2>
+
+              <div class="form-item">
+                <ion-label position="stacked">Your Name</ion-label>
+                <ion-input
+                  color="undefined"
+                  type="text"
+                  placeholder="e.g Osama Alshathri"
+                ></ion-input>
+              </div>
+
+              <div class="form-item">
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input
+                  color="undefined"
+                  type="email"
+                  placeholder="Osama@gmail.com"
+                ></ion-input>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <h2>Child's Information</h2>
+
+              <div class="form-item">
+                <ion-label position="stacked">Child’s Full Name</ion-label>
+                <ion-input
+                  color="undefined"
+                  type="text"
+                  placeholder="e.g Sarah Mohammad"
+                ></ion-input>
+              </div>
+
+              <div class="form-item">
+                <ion-label position="stacked">Child’s Date of Birth</ion-label>
+                <ion-grid class="date-grid">
+                  <ion-row>
+                    <ion-col>
+                      <ion-select
+                        placeholder="Date"
+                        color="undefined"
+                        toggleIcon="chevron-down-outline"
+                        expandedIcon="chevron-up-outline"
+                      >
+                        @for (day of days; track $index) {
+                        <ion-select-option [value]="day"
+                          >{{day}}</ion-select-option
+                        >
+                        }
+                      </ion-select>
+                    </ion-col>
+                    <ion-col>
+                      <ion-select
+                        placeholder="Month"
+                        color="undefined"
+                        toggleIcon="chevron-down-outline"
+                        expandedIcon="chevron-up-outline"
+                      >
+                        @for (month of months; track $index) {
+                        <ion-select-option [value]="$index"
+                          >{{month}}</ion-select-option
+                        >
+                        }
+                      </ion-select>
+                    </ion-col>
+                    <ion-col>
+                      <ion-select
+                        placeholder="Year"
+                        color="undefined"
+                        toggleIcon="chevron-down-outline"
+                        expandedIcon="chevron-up-outline"
+                      >
+                        @for (year of years; track $index) {
+                        <ion-select-option [value]="year"
+                          >{{year}}</ion-select-option
+                        >
+                        }
+                      </ion-select>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+
+              <div class="form-item">
+                <ion-label position="stacked">Grade</ion-label>
+                <ion-select
+                  placeholder="e.g Grade 2"
+                  color="undefined"
+                  toggleIcon="chevron-down-outline"
+                  expandedIcon="chevron-up-outline"
+                >
+                  @for (grade of grades; track $index) {
+                  <ion-select-option [value]="grade"
+                    >{{grade}}</ion-select-option
+                  >
+                  }
+                </ion-select>
+              </div>
+
+              <div class="form-item">
+                <ion-label position="stacked">Gender</ion-label>
+                <div class="radio-select">
+                  <ion-radio-group value="custom-checked">
+                    <ion-radio value="custom" aria-label="Custom checkbox"
+                      >Boy</ion-radio
+                    >
+                    <ion-radio
+                      value="custom-checked"
+                      aria-label="Custom checkbox that is checked"
+                      >Girl</ion-radio
+                    >
+                  </ion-radio-group>
+                </div>
+              </div>
+
+              <div class="form-item custom-label">
+                <ion-label position="stacked"
+                  >As a parent select any 3 topics</ion-label
+                >
+                <div class="checkbox-select">
+                  <ion-radio-group value="custom-checked">
+                    @for (option of options; track $index) {
+                    <ion-checkbox [value]="option" aria-label="Custom checkbox">
+                      {{option}}
+                    </ion-checkbox>
+                    }
+                  </ion-radio-group>
+                </div>
+              </div>
+            </div>
+          </form>
+          <ion-button type="submit">Continue to payment</ion-button>
         </div>
         <div class="side right-side">
-          <h1>Summary</h1>
-          <p>of your Monthly Surprise Box</p>
+          <div class="head">
+            <h1>Summary</h1>
+            <p>of your Monthly Surprise Box</p>
+          </div>
         </div>
       </div>
     </div>
