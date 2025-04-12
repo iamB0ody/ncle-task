@@ -1,0 +1,47 @@
+.footer-container {
+  min-height: 214px;
+  padding: 0 4rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .footer-content {
+    width: 100%;
+    margin: 80px auto;
+    ion-row {
+      border-top: 1px solid black;
+      padding-top: 33px;
+    }
+    .left-side {
+      text-align: start;
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 24px;
+        li {
+          a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            color: black;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .right-side {
+      text-align: end;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: black;
+        margin: 0;
+      }
+    }
+  }
+}
