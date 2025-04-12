@@ -1,0 +1,34 @@
+<div class="discover-container">
+  <!-- content -->
+  <div class="discover-content">
+    <p class="title">Discover</p>
+    <h2>How It Works: Subscribe and Receive Your Surprise Box</h2>
+    <p class="description">
+      Subscribe to our surprise subscription box and give your child the gift of
+      learning. Each month, we curate a box filled with educational materials
+      tailored to your child's age and interests.
+    </p>
+  </div>
+
+  <!-- steps -->
+
+  <div class="steps-content">
+    <ion-grid>
+        <ion-row class="steps-row">
+            @for (step of steps; track $index) {
+                <ion-col>
+                    <div class="step">
+                        <img src="{{ step.icon }}" alt="step-icon" />
+                        <h3>Step {{ $index + 1 }}: <br> {{ step.title }}</h3>
+                        <p>{{ step.description }}</p>
+                      </div>
+                </ion-col>
+                }
+        </ion-row>
+    </ion-grid>
+    
+  </div>
+
+  <!-- action button -->
+  <ion-button class="action-button">Subscribe Now</ion-button>
+</div>

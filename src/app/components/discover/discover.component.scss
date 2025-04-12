@@ -1,0 +1,85 @@
+.discover-container {
+  background-color: #fff9e6;
+  background-image: url("/assets/images/discover-bg.png");
+  background-repeat: no-repeat;
+  // background-size: contain;
+  background-size: 100% auto;
+  background-position: center top;
+  padding: 7rem 4rem;
+  .discover-content {
+    max-width: 768px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    p {
+      line-height: 150%;
+      color: #000000;
+    }
+    p.title {
+      font-weight: 600;
+      font-size: 16px;
+      margin: 0;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      color: #000000;
+      margin: 16px 0 24px 0;
+    }
+    p.description {
+      font-weight: 400;
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  .steps-content {
+    margin: 0 auto 48px auto;
+    text-align: center;
+    .steps-row {
+      gap: 48px;
+      .step {
+        img {
+          width: 96px;
+          height: 96px;
+          margin-bottom: 24px;
+        }
+        h3 {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 130%;
+          color: #000000;
+          margin: 0 0 24px 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: #000000;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  ion-button.action-button {
+    width: 221.09px;
+    height: 71.4px;
+    --border-radius: 24px;
+    --border-width: 1px;
+    --border-color: #896af9;
+    --border-style: solid;
+    font-size: 23px;
+    --background: white;
+    --color: #896af9;
+    font-weight: 900;
+    line-height: 38.4px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    --box-shadow: 4px 4px 0px -1px #896af9;
+    --padding-start: 26px;
+    --padding-end: 26px;
+    --padding-top: 15.5px;
+    --padding-bottom: 15.5px;
+  }
+}
