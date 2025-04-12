@@ -44,6 +44,10 @@
   font-style: normal;
 }
 
+ion-content {
+  --background: white;
+}
+
 ion-grid,
 ion-row {
   padding: 0;

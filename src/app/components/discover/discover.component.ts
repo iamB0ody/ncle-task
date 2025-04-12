@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { IonButton, IonGrid, IonRow, IonCol } from '@ionic/angular/standalone';
+import { RouterModule } from '@angular/router';
+import { IonButton, IonCol, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { Step } from 'src/app/utils';
 
 @Component({
   selector: 'app-discover',
   templateUrl: 'discover.component.html',
   styleUrls: ['discover.component.scss'],
-  imports: [IonGrid, IonButton, IonRow, IonCol],
+  imports: [IonGrid, IonButton, IonRow, IonCol, RouterModule],
 })
 export class DiscoverComoponent {
   constructor() {}
