@@ -1,0 +1,7 @@
+{
+  "name": "ncle-task",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
