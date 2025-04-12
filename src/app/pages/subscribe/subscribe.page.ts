@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   IonButton,
@@ -36,6 +37,7 @@ import { HeaderComoponent } from 'src/app/components/header/header.component';
     IonSelectOption,
     IonRadio,
     IonCheckbox,
+    CommonModule,
   ],
 })
 export class SubscribePage {

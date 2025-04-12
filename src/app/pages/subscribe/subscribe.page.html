@@ -142,7 +142,7 @@
               </div>
             </div>
           </form>
-          <ion-button type="submit">Continue to payment</ion-button>
+          <ng-container *ngTemplateOutlet="button"></ng-container>
         </div>
         <div class="side right-side">
           <div class="head">
@@ -180,8 +180,13 @@
             </div>
             <span class="recurring">Monthly</span>
           </div>
+          <ng-container *ngTemplateOutlet="button"></ng-container>
         </div>
       </div>
     </div>
   </div>
 </ion-content>
+
+<ng-template #button>
+  <ion-button type="submit">Continue to payment</ion-button>
+</ng-template>
