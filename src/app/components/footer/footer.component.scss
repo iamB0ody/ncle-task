@@ -44,4 +44,23 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 0 1rem;
+    .footer-content {
+      .left-side {
+        .menu {
+          flex-direction: column;
+          align-items: start;
+          margin-bottom: 32px;
+        }
+      }
+      .right-side {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+    }
+  }
 }

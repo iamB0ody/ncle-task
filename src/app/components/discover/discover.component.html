@@ -14,19 +14,20 @@
 
   <div class="steps-content">
     <ion-grid>
-        <ion-row class="steps-row">
-            @for (step of steps; track $index) {
-                <ion-col>
-                    <div class="step">
-                        <img src="{{ step.icon }}" alt="step-icon" />
-                        <h3>Step {{ $index + 1 }}: <br> {{ step.title }}</h3>
-                        <p>{{ step.description }}</p>
-                      </div>
-                </ion-col>
-                }
-        </ion-row>
+      <ion-row class="steps-row">
+        @for (step of steps; track $index) {
+        <ion-col>
+          <div class="step">
+            <img src="{{ step.icon }}" alt="step-icon" />
+            <h3>
+              <span>Step {{ $index + 1 }}:</span> {{ step.title }}
+            </h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </ion-col>
+        }
+      </ion-row>
     </ion-grid>
-    
   </div>
 
   <!-- action button -->
