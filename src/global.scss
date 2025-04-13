@@ -81,3 +81,8 @@ ion-button {
   --padding-top: 15.5px;
   --padding-bottom: 15.5px;
 }
+
+ion-input.ion-touched.ion-invalid,
+ion-select.ion-touched.ion-invalid {
+  border-bottom: 1px solid red !important;
+}

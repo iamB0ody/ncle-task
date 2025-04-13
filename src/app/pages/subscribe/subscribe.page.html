@@ -9,7 +9,7 @@
             <h1>Subscribe</h1>
             <p>to our Monthly Surprise Box</p>
           </div>
-          <form>
+          <form [formGroup]="form">
             <div class="form-group">
               <h2>Contact Information</h2>
 
@@ -19,6 +19,7 @@
                   color="undefined"
                   type="text"
                   placeholder="e.g Osama Alshathri"
+                  formControlName="name"
                 ></ion-input>
               </div>
 
@@ -28,6 +29,7 @@
                   color="undefined"
                   type="email"
                   placeholder="Osama@gmail.com"
+                  formControlName="email"
                 ></ion-input>
               </div>
             </div>
@@ -41,6 +43,7 @@
                   color="undefined"
                   type="text"
                   placeholder="e.g Sarah Mohammad"
+                  formControlName="childName"
                 ></ion-input>
               </div>
 
@@ -54,6 +57,7 @@
                         color="undefined"
                         toggleIcon="chevron-down-outline"
                         expandedIcon="chevron-up-outline"
+                        formControlName="day"
                       >
                         @for (day of days; track $index) {
                         <ion-select-option [value]="day"
@@ -68,6 +72,7 @@
                         color="undefined"
                         toggleIcon="chevron-down-outline"
                         expandedIcon="chevron-up-outline"
+                        formControlName="month"
                       >
                         @for (month of months; track $index) {
                         <ion-select-option [value]="$index"
@@ -82,6 +87,7 @@
                         color="undefined"
                         toggleIcon="chevron-down-outline"
                         expandedIcon="chevron-up-outline"
+                        formControlName="year"
                       >
                         @for (year of years; track $index) {
                         <ion-select-option [value]="year"
@@ -101,6 +107,7 @@
                   color="undefined"
                   toggleIcon="chevron-down-outline"
                   expandedIcon="chevron-up-outline"
+                  formControlName="grade"
                 >
                   @for (grade of grades; track $index) {
                   <ion-select-option [value]="grade"
@@ -113,12 +120,15 @@
               <div class="form-item">
                 <ion-label position="stacked">Gender</ion-label>
                 <div class="radio-select">
-                  <ion-radio-group value="custom-checked">
-                    <ion-radio value="custom" aria-label="Custom checkbox"
+                  <ion-radio-group
+                    value="custom-checked"
+                    formControlName="gender"
+                  >
+                    <ion-radio value="boy" aria-label="Custom checkbox"
                       >Boy</ion-radio
                     >
                     <ion-radio
-                      value="custom-checked"
+                      value="girl"
                       aria-label="Custom checkbox that is checked"
                       >Girl</ion-radio
                     >
@@ -131,13 +141,16 @@
                   >As a parent select any 3 topics</ion-label
                 >
                 <div class="checkbox-select">
-                  <ion-radio-group value="custom-checked">
-                    @for (option of options; track $index) {
-                    <ion-checkbox [value]="option" aria-label="Custom checkbox">
-                      {{option}}
-                    </ion-checkbox>
-                    }
-                  </ion-radio-group>
+                  @for (topic of topics; track $index) {
+                  <ion-checkbox
+                    [value]="topic"
+                    aria-label="Custom checkbox"
+                    (ionChange)="onTopicsChange($event)"
+                    [checked]="topics$ | isTopicSelected$: topic | async"
+                  >
+                    {{topic}}
+                  </ion-checkbox>
+                  }
                 </div>
               </div>
             </div>
@@ -188,5 +201,5 @@
 </ion-content>
 
 <ng-template #button>
-  <ion-button type="submit">Continue to payment</ion-button>
+  <ion-button (click)="continue()">Continue to payment</ion-button>
 </ng-template>
